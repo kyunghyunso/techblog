@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-scripts": "3.4.3"
   },
   "scripts": {
@@ -17,13 +18,18 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": ["react-app", "shared-config"],
+    "extends": [
+      "react-app",
+      "shared-config"
+    ],
     "rules": {
       "additional-rule": "warn"
     },
     "overrides": [
       {
-        "files": ["**/*.ts?(x)"],
+        "files": [
+          "**/*.ts?(x)"
+        ],
         "rules": {
           "additional-typescript-only-rule": "warn"
         }
