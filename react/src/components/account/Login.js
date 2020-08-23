@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Redirect } from 'react-router'
 
-import { login } from 'redux/actions/auth'
+import { loginSuccess } from 'redux/actions/auth'
 import { connect } from 'react-redux';
 import axios from 'lib/axios'
 
-export default function Login({auth}){
+function Login({auth}){
 
     const [id, setId] = useState('')
     const [pw, setPw] = useState('')
@@ -17,7 +17,7 @@ export default function Login({auth}){
             id : id,
             pw :pw
         }).then(res=>{
-            login(res)
+            loginSuccess(res)
             setRedirect('/blog/viewer')
         }).catch(err=>{
             console.log(err)
@@ -49,11 +49,13 @@ export default function Login({auth}){
     )
 }
 
-const mapStateToProps = (state) => ({
-    auth: state.auth
-})
+function mapStateToProps(state){
+    return {
+        auth: state.auth
+    }
+}
 
 export default connect(
     mapStateToProps,
-    { login }
-)(PrivateRoute)
+    { loginSuccess }
+)(Login)

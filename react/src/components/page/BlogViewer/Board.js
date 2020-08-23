@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Unit from './Unit'
 import axios from 'lib/axios'
@@ -15,7 +15,9 @@ export default function Board(){
     },[])
 
     const list = data.map((item, index)=>{
-        <Unit key={"article"+index} data={item}/>
+        return(
+            <Unit key={"article"+index} data={item}/>
+        )
     })
 
     return(

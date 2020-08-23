@@ -1,4 +1,5 @@
-import logo from '../logo.svg';
+import React from 'react'
+//import logo from '../logo.svg';
 import Logout from 'components/account/Logout'
 
 export default function Header(){

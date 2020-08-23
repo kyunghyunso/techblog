@@ -1,11 +1,9 @@
-import Axios from "axios"
-
-import {useState} from 'react'
+import React, {useState} from 'react'
 import { connect } from 'react-redux';
 
 import axios from 'lib/axios'
 
-export default function Writer({auth}){
+function Writer({auth}){
 
     const [text, setText] = useState('')
 
@@ -31,10 +29,13 @@ export default function Writer({auth}){
     )
 }
 
-const mapStateToProps = (state) => ({
-    auth: state.auth
-})
+function mapStateToProps(state){
+    return {
+        auth: state.auth
+    }
+}
 
 export default connect(
-    mapStateToProps
+    mapStateToProps,
+    null
 )(Writer)
