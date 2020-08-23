@@ -1,8 +1,15 @@
 import React from 'react'
-import { logout } from 'redux/actions/auth'
 
-export default function Logout(){
+import { Logout } from '@redux/actions/auth'
+import { connect } from 'react-redux';
+
+function LogoutButton(){
     return(
-        <button onClick={()=>logout()}>로그아웃</button>
+        <button onClick={()=>Logout()}>로그아웃</button>
     )
 }
+
+export default connect(
+    null,
+    { Logout }
+)(LogoutButton)

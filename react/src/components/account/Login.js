@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router'
+import {useHistory} from 'react-router-dom'
 
-import { loginSuccess } from 'redux/actions/auth'
+//import { Redirect } from 'react-router'
+
+import { LoginSuccess } from '@redux/actions/auth'
 import { connect } from 'react-redux';
-import axios from 'lib/axios'
+import axios from '@lib/axios'
 
 function Login({auth}){
 
+    const history = useHistory()
+
     const [id, setId] = useState('')
     const [pw, setPw] = useState('')
-    const [redirect, setRedirect] = useState('')
+    //const [redirect, setRedirect] = useState('')
 
     function handleSubmit(){
         console.log(id, pw)
@@ -17,14 +21,14 @@ function Login({auth}){
             id : id,
             pw :pw
         }).then(res=>{
-            loginSuccess(res)
-            setRedirect('/blog/viewer')
+            LoginSuccess(res)
+            history.goback()
         }).catch(err=>{
             console.log(err)
         })
     }
 
-    if(redirect){return(<Redirect to={redirect}/>)}
+    //if(redirect){return(<Redirect to={redirect}/>)}
 
     return(
         <>
@@ -57,5 +61,5 @@ function mapStateToProps(state){
 
 export default connect(
     mapStateToProps,
-    { loginSuccess }
+    { LoginSuccess }
 )(Login)

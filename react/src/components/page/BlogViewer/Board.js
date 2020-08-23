@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import Unit from './Unit'
-import axios from 'lib/axios'
+import axios from '@lib/axios'
 
 export default function Board(){
 
@@ -21,8 +21,12 @@ export default function Board(){
     })
 
     return(
-        <ul className="board">
-            {list}
-        </ul>
+        <div className="board">
+            <h2>기술 게시판</h2>
+            <ul className="boardList">
+                {list}
+            </ul>
+        </div>
+        
     )
 }

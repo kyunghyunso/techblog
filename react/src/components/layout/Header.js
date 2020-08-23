@@ -1,12 +1,26 @@
 import React from 'react'
 //import logo from '../logo.svg';
-import Logout from 'components/account/Logout'
+import Logout from '@components/account/Logout'
+import WriteButton from '@components/page/BlogWriter/WriteButton'
 
-export default function Header(){
+import { connect } from 'react-redux';
+
+function Header({auth}){
     return(
         <div className="header">
             Team ZeroHouse TechBlog
-            <Logout/>
+            {auth.uid&&<Logout/>}
+            <WriteButton/>
         </div>
     )
 }
+
+function mapStateToProps(state){
+    return {
+        auth: state.auth
+    }
+}
+
+export default connect(
+    mapStateToProps
+)(Header)

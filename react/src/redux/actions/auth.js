@@ -1,10 +1,10 @@
 import { LOGIN, LOGOUT} from '../constants/AuthTypes'
 
-export const loginSuccess = (authObj) => ({
+export const LoginSuccess = (authObj) => ({
     type : LOGIN,
     laod : authObj
 })
 
-export const logout = (authObj) => ({
+export const Logout = (authObj) => ({
     type : LOGOUT
 })

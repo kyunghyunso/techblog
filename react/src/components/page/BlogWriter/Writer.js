@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { connect } from 'react-redux';
 
-import axios from 'lib/axios'
+import axios from '@lib/axios'
 
 function Writer({auth}){
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
-import s from '../config/settings'
+//import s from '../config/settings'
 
-var root = s.REST_SERVER.protocol + '//' + s.REST_SERVER.host
+var root = 'http:' + '//' + 'localhost'
 
 const http = axios.create({
   baseURL: root + '/api/'

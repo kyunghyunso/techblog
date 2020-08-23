@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
-import PrivateRoute from 'components/common/PrivateRoute'
+import PrivateRoute from '@components/common/PrivateRoute'
 
-import Login from 'components/page/Login'
-import BlogViewer from 'components/page/BlogViewer'
-import BlogWriter from 'components/page/BlogWriter'
+import Login from '@components/page/Login'
+import BlogViewer from '@components/page/BlogViewer'
+import BlogWriter from '@components/page/BlogWriter'
 
-import Header from './components/layout/Header'
+import Header from '@components/layout/Header'
 
 import './App.css';
 

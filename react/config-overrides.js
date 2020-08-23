@@ -13,8 +13,8 @@ module.exports = override(
         modifyVars: theme,
     }),*/
     addWebpackAlias({
-        ['lib']: path.resolve(__dirname, './src/lib'),
-        ['components']: path.resolve(__dirname, './src/components'),
-        ['redux']: path.resolve(__dirname, './src/redux')
+        ['@lib']: path.resolve(__dirname, './src/lib'),
+        ['@components']: path.resolve(__dirname, './src/components'),
+        ['@redux']: path.resolve(__dirname, './src/redux')
     })
 );
