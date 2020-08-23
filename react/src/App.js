@@ -1,6 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 
+import Login from 'components/page/Login'
+import BlogViewer from 'components/page/BlogViewer'
+import BlogWriter from 'components/page/BlogWriter'
+
 import Header from './components/layout/Header'
 
 import './App.css';

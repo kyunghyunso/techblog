@@ -1,13 +1,30 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import { Redirect } from 'react-router'
 
-export default function Login(){
+import { login } from 'redux/actions/auth'
+import { connect } from 'react-redux';
+import axios from 'lib/axios'
+
+export default function Login({auth}){
 
     const [id, setId] = useState('')
     const [pw, setPw] = useState('')
+    const [redirect, setRedirect] = useState('')
 
     function handleSubmit(){
         console.log(id, pw)
+        axios.post('/auth/login', {
+            id : id,
+            pw :pw
+        }).then(res=>{
+            login(res)
+            setRedirect('/blog/viewer')
+        }).catch(err=>{
+            console.log(err)
+        })
     }
+
+    if(redirect){return(<Redirect to={redirect}/>)}
 
     return(
         <>
@@ -31,3 +48,12 @@ export default function Login(){
         </>
     )
 }
+
+const mapStateToProps = (state) => ({
+    auth: state.auth
+})
+
+export default connect(
+    mapStateToProps,
+    { login }
+)(PrivateRoute)
