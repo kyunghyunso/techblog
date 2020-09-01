@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './index.module.css';
 import logo from './text_logo.svg';
-//import icon1 from './icon1.svg';
-//import icon2 from './icon2.svg';
+import search_icon from './search_icon.svg';
+import home_icon from './home_icon.svg';
 
 import Menu from '@components/layout/Header/Menu'
 import Logout from '@components/account/Logout'
@@ -18,8 +18,8 @@ function Header({auth}){
                 <div className={styles.left}>
                     <Menu/>
                     <div className={styles.icons}>
-                        {/*<img src={icon1} alt={"Home"} className={styles.icon}></img>
-                        <img src={icon2} alt={"Wonder"} className={styles.icon}></img>*/}
+                        <img src={search_icon} alt={"search"} className={styles.icon}></img>
+                        <img src={home_icon} alt={"home"} className={styles.icon}></img>
                     </div>
                     {auth.uid&&<Logout/>}
                     {/*<WriteButton/>*/}

@@ -33,7 +33,7 @@
 
 .list {
     display: inline-block;
-    margin: 0px 25px;
+    margin: 0px 20px;
     text-align: right;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
@@ -53,15 +53,11 @@
 }
 
 .icons {
-    align-self:flex-end;
-    padding:0 0 16px 0;
 }
 
 .icon {
     display:inline-block;    
-    width:46px;
-    height:46px;
-    margin: 0px 5.5px;
-    background-color:gray;
-    border-radius: 14px;
+    width:19px;
+    height:19px;
+    margin: 0 0 0 27px;
 }

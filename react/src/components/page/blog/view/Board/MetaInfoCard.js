@@ -2,13 +2,12 @@ import React from 'react'
 import styles from './index.module.css'
 
 export default function MetaInfoCard(article){
-    console.log(article)
     return(
         <div className={styles.container}>
             <img src={article.author.imgUrl}/>
             <div className={styles.describe}>
-                <span>{article.author.position}</span>
-                <span>{article.updated}</span>
+                <p className={styles.author}>{article.author.position+"."+article.author.nickname}</p>
+                <p className={styles.article}>{article.updated._seconds}</p>
             </div>
         </div>
     )
