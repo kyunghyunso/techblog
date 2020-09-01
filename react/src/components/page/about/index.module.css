@@ -1,0 +1,43 @@
+.section {
+    width:900px;
+    margin: 50px 0px;
+}
+
+.title{
+    margin: 20px 0px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.text{
+    font-size:20px;
+    color:#5C5C5C;
+}
+
+
+.profilebox {
+    padding:48px 0px;
+    display: flex;
+}
+
+.profile_image {
+    display:inline-flex;
+    width:124px;
+    height:124px;
+}
+
+.profile_content {
+    display:inline-block;
+    height:124px;
+    
+}
+
+.profile_content h1 {
+    font-size:20px;
+    color:#5C5C5C;
+}
+
+
+
+
+

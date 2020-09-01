@@ -5,7 +5,7 @@ import {useHistory} from 'react-router-dom'
 
 import { LoginSuccess } from '@redux/actions/auth'
 import { connect } from 'react-redux';
-import axios from '@lib/axios'
+import axios from '@lib/Axios'
 
 function Login({auth}){
 

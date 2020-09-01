@@ -1,0 +1,14 @@
+[
+    {
+        "text":"제로하우스 기술 블로그 소개",
+        "link":"/about"
+    },
+    {
+        "text":"BLOG",
+        "link":"/blog/view"
+    },
+    {
+        "text":"GITHUB",
+        "link":"https://github.com/Team-ZeroHouse/techblog"
+    }
+]
