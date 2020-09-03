@@ -1,0 +1,15 @@
+.section {
+    width:900px;
+    margin: 50px 0px;
+}
+
+.title{
+    margin: 20px 0px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.text{
+    font-size:20px;
+    color:#5C5C5C;
+}
