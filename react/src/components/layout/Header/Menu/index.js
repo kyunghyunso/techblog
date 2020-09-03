@@ -8,7 +8,12 @@ export default function Menu(){
 
     let list = menuList.map((item, index)=>{
         return(
-            <li key={"menu"+index} className={styles.list}><Link to={item.link}>{item.text}</Link></li>
+            <li key={"menu"+index} className={styles.list}>
+                {item.external?
+                    <a href={item.link}>{item.text}</a>:
+                    <Link to={item.link}>{item.text}</Link>
+                }
+            </li>
         )
     })
 

@@ -1,9 +1,9 @@
 import React from 'react'
-import Board from './Board'
+import Writer from '@components/blog/Writer'
 
 export default function Page(){
 
     return(
-        <Board/>
+        <Writer/>
     )
 }

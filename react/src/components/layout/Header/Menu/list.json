@@ -5,10 +5,11 @@
     },
     {
         "text":"BLOG",
-        "link":"/blog/view"
+        "link":"/blog/list"
     },
     {
         "text":"GITHUB",
-        "link":"https://github.com/Team-ZeroHouse/techblog"
+        "link":"https://github.com/Team-ZeroHouse/techblog",
+        "external":true
     }
 ]

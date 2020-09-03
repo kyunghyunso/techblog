@@ -4,9 +4,9 @@ import {
 } from '../constants/AuthTypes'
   
 const initialState = {
-    id : '',
-    nickname : '',
+    user : null,
     token : '',
+    isAuthenticated : false
 }
   
 export default function Auth(state = initialState, action) {
@@ -14,7 +14,7 @@ export default function Auth(state = initialState, action) {
       case LOGIN:
           return action.load
       case LOGOUT:
-          return state
+          return initialState
       default:
           return state
   }

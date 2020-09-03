@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../index.module.css'
+import styles from './section.module.css'
 import sections from './sections.json'
 
 export default function Section(){

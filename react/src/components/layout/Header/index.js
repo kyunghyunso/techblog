@@ -4,9 +4,11 @@ import logo from './text_logo.svg';
 import search_icon from './search_icon.svg';
 import home_icon from './home_icon.svg';
 
+import { Link } from 'react-router-dom';
+
 import Menu from '@components/layout/Header/Menu'
 import Logout from '@components/account/Logout'
-import WriteButton from '@components/page/blog/write/WriteButton'
+import WriteButton from '@components/layout/Header/Menu/WriteButton'
 
 import { connect } from 'react-redux';
 
@@ -14,15 +16,24 @@ function Header({auth}){
     return(
         <div className={styles.header}>
             <div className={styles.middle}>
-                <img src={logo} alt={"Team ZeroHouse"} className={styles.text_logo}></img>
+                <Link to={"/"}>
+                    <img src={logo} alt={"Team ZeroHouse"} className={styles.text_logo}/>
+                </Link>
+
                 <div className={styles.left}>
                     <Menu/>
                     <div className={styles.icons}>
-                        <img src={search_icon} alt={"search"} className={styles.icon}></img>
-                        <img src={home_icon} alt={"home"} className={styles.icon}></img>
+                        <img src={search_icon} alt={"search"} className={styles.icon}/>
+                        <a href={"https://zerohouse.team/"}>
+                            <img src={home_icon} alt={"home"} className={styles.icon}/>
+                        </a>
                     </div>
-                    {auth.uid&&<Logout/>}
-                    {/*<WriteButton/>*/}
+                    {auth.isAuthenticated&&
+                        <>
+                            <Logout/>
+                            <WriteButton/>
+                        </>
+                    }
                 </div>   
             </div>
         </div>

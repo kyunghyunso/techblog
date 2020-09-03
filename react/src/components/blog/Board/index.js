@@ -10,8 +10,8 @@ export default function Board(){
 
     useEffect(()=>{
         (async function reqData(){
-            let req = await axios.get('blog/articles/')
-            console.log(req)
+            let req = await axios.get('blog/articles')
+            console.log(req.data)
             setData(req.data.success)
         })();        
     },[])

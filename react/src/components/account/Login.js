@@ -1,43 +1,41 @@
 import React, { useState } from 'react'
-import {useHistory} from 'react-router-dom'
-
-//import { Redirect } from 'react-router'
+import styles from './login.module.css'
+import { useHistory } from 'react-router-dom'
 
 import { LoginSuccess } from '@redux/actions/auth'
 import { connect } from 'react-redux';
 import axios from '@lib/Axios'
 
-function Login({auth}){
+function Login({auth, LoginSuccess}){
 
     const history = useHistory()
 
-    const [id, setId] = useState('')
+    const [email, setEmail] = useState('')
     const [pw, setPw] = useState('')
-    //const [redirect, setRedirect] = useState('')
 
-    function handleSubmit(){
-        console.log(id, pw)
-        axios.post('/auth/login', {
-            id : id,
-            pw :pw
+    function handleSubmit(e){
+        e.preventDefault()
+        console.log(email, pw)
+        axios.post('auth/login', {
+            email : email,
+            password :pw
         }).then(res=>{
-            LoginSuccess(res)
-            history.goback()
+            console.log(res.data.success)
+            LoginSuccess(res.data.success.jwt)
+            history.goBack()
         }).catch(err=>{
             console.log(err)
         })
     }
 
-    //if(redirect){return(<Redirect to={redirect}/>)}
-
-    return(
-        <>
-            <form onSubmit={()=>handleSubmit()}>
+    if(!auth.isAuthenticated){
+        return(
+            <form onSubmit={(event)=>handleSubmit(event)} className={styles.form}>
                 <label>
                     <input 
                         type ="text" name="id" 
-                        value={id} placeholder="ID"
-                        onChange={(event)=>{setId(event.target.value)}}
+                        value={email} placeholder="ID"
+                        onChange={(event)=>{setEmail(event.target.value)}}
                     />
                 </label>
                 <label>
@@ -49,8 +47,12 @@ function Login({auth}){
                 </label>
                 <input type="submit" value="로그인"/>
             </form>
-        </>
-    )
+        )
+    }else{
+        return(
+            <p className={styles.successMsg}>{"로그인 성공! " + auth.user.nickname}</p>
+        )
+    }
 }
 
 function mapStateToProps(state){

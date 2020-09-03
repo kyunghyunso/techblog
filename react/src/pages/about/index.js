@@ -1,6 +1,6 @@
 import React from 'react'
-import Profile from './Profile'
-import Section from './Section'
+import Profile from '@components/about/Profile'
+import Section from '@components/about/Section'
 
 export default function Page(){
 
