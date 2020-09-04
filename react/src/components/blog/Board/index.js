@@ -4,7 +4,9 @@ import styles from './index.module.css'
 import Unit from './Unit'
 import axios from '@lib/Axios'
 
-export default function Board(){
+import { connect } from 'react-redux';
+
+function Board({auth}){
 
     const [data, setData] = useState([])
 
@@ -18,7 +20,11 @@ export default function Board(){
 
     const list = data.map(item=>{
         return(
-            <Unit key={"article"+item.articleId} data={item.article} id={item.articleId}/>
+            <Unit key={"article"+item.articleId} 
+                  data={item.article} 
+                  id={item.articleId}
+                  isLogin={auth}
+            />
         )
     })
 
@@ -31,3 +37,14 @@ export default function Board(){
         
     )
 }
+
+function mapStateToProps(state){
+    return {
+        auth: state.auth
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    null
+)(Board)

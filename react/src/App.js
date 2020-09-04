@@ -9,6 +9,7 @@ import About from 'src/pages/about'
 import BlogArticleList from 'src/pages/blog/list'
 import BlogArticleView from 'src/pages/blog/view/[id]'
 import BlogArticleWriter from 'src/pages/blog/write'
+import BlogArticleEditor from 'src/pages/blog/edit/[id]'
 
 import './index.css';
 
@@ -24,6 +25,7 @@ function App() {
               <Route exact path="/blog/list" component={BlogArticleList} />
               <Route exact path="/blog/view/:id" component={BlogArticleView} />
               <PrivateRoute exact path="/blog/write" component={BlogArticleWriter} />
+              <PrivateRoute exact path="/blog/edit/:id" component={BlogArticleEditor} />
           </Switch>
         </div>
     </Router>

@@ -1,6 +1,9 @@
 .header {
     display: flex;
     justify-content:center;
+    border-bottom-style:solid;
+    border-width:thin;
+    border-color:#D4D4D4;
 }
 
 .middle {

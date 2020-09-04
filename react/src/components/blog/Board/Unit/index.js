@@ -1,10 +1,11 @@
 import React from 'react'
-import styles from './index.module.css'
+import styles from './unit.module.css'
 
 import { Link } from 'react-router-dom';
 import MetaInfo from '@components/common/MetaInfoCard'
+import EditButtons from './EditButtons'
 
-export default function Unit({data, id}){
+export default function Unit({data, id, isLogin}){
 
     return(
         <Link to ={`/blog/view/${id}`}>
@@ -19,8 +20,9 @@ export default function Unit({data, id}){
                         <img src={data.thumbnailUrl}/>
                     </div>
                 }
+            {isLogin&&<EditButtons id={id} auth={isLogin}/>}
             </li>
         </Link>
-        
     )
 }
+

@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from './profile.module.css'
-import profiles from './profiles.json'
 
 import { Link } from 'react-router-dom';
 
 import homepage_icon from './personal-homepage-icon.svg'
 import git_icon from './git-icon.svg'
 
-export default function Profile(){
+export default function Profile({profiles}){
 
     let list = profiles.map((item, index)=>{
         return(
