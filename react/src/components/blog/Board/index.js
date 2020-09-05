@@ -23,7 +23,7 @@ function Board({auth}){
             <Unit key={"article"+item.articleId} 
                   data={item.article} 
                   id={item.articleId}
-                  isLogin={auth}
+                  auth={auth}
             />
         )
     })

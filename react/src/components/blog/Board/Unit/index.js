@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import MetaInfo from '@components/common/MetaInfoCard'
 import EditButtons from './EditButtons'
 
-export default function Unit({data, id, isLogin}){
-
+export default function Unit({data, id, auth}){
+    //console.log(data, auth)
     return(
         <Link to ={`/blog/view/${id}`}>
             <li className={styles.section}>
@@ -20,7 +20,7 @@ export default function Unit({data, id, isLogin}){
                         <img src={data.thumbnailUrl}/>
                     </div>
                 }
-            {isLogin&&<EditButtons id={id} auth={isLogin}/>}
+            {auth.user.id==data.author.id&&<EditButtons id={id} auth={auth}/>}
             </li>
         </Link>
     )

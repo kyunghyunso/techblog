@@ -17,8 +17,6 @@ export default function Page(){
         })();          
     },[])
 
-    console.log(data)
-
     if(!data){return null}
     return(
         <Writer article={data.article} id={data.articleId}/>

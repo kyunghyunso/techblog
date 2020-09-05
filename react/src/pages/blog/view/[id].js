@@ -13,11 +13,12 @@ export default function Page(){
     useEffect(()=>{
         (async function reqData(){
             let req = await axios.get(`blog/articles/${id}`)
-            setData(req.data.success.article)
+            setData(req.data.success)
         })();          
     },[id])
 
+    if(!data){return null}
     return(
-        <ArticleViewer article={data}/>
+        <ArticleViewer article={data.article} id={data.articleId}/>
     )
 }
