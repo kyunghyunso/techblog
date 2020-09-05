@@ -33,6 +33,7 @@ function Writer({auth, article, id}){
             history.push(`/blog/list`)
           }).catch(err=>{
             console.log(err)
+            alert('수정 실패!', err)
           })
         }else{
           axios.post(`blog/articles`, {
@@ -64,6 +65,7 @@ function Writer({auth, article, id}){
           history.push(`/blog/list`)
         }).catch(err=>{
           console.log(err)
+          alert('삭제 실패!', err)
         })
       }      
     }
