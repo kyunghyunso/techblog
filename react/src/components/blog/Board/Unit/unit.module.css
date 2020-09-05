@@ -1,0 +1,53 @@
+.section {
+    width:900px;
+    height:220px;
+    padding:20px 0;
+    border-bottom-style:solid;
+    border-width:thin;
+    border-color:#D4D4D4;
+}
+
+.textbox {
+    text-align:left;
+    letter-spacing: 0px;
+    color: #4D4D4D
+}
+
+.textbox .title{
+    font-size:23px;
+    font-weight: bold;
+}
+
+.textbox .abstract{
+    font-size:16px;
+}
+
+.imagebox {
+    width:319px;
+    height:220px;
+}
+
+.buttons {
+    margin:0 10px 0 auto; 
+    display:flex;
+    justify-content: flex-end;
+}
+
+.buttons button {
+    display:block;
+    width : 50px;
+    height: 25px;
+    margin:2px;
+    color: white;
+    font-weight:bold;
+    border:none;
+    border-radius: 10px;
+}
+
+.buttons .edit {
+    background-color: #41a85f;
+}   
+
+.buttons .delete {
+    background-color: #D61F2C;
+}
