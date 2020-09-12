@@ -17,7 +17,7 @@ function ArticleViewer({article, id, auth}){
             <div className={styles.header}>
                 <h1 className={styles.title}>{article.title}</h1>
                 <MetaInfoCard {...article}/>
-                {auth.user.id==article.author.id&&<EditButtons id={id} auth={auth}/>}
+                {auth?.user?.id == article.author.id&&<EditButtons id={id} auth={auth}/>}
             </div>
             <Viewer
                 initialValue={article.content}
