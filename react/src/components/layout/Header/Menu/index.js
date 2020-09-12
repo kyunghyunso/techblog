@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../index.module.css';
+import styles from './menu.module.scss';
 
 import { Link } from 'react-router-dom';
 import menuList from './list.json'

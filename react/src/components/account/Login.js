@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './login.module.css'
+import styles from './login.module.scss'
 import { useHistory } from 'react-router-dom'
 
 import { LoginSuccess } from '@redux/actions/auth'

@@ -1,0 +1,26 @@
+.form {
+    margin: 50px auto;
+    width:fit-content;
+    input {
+        display:block;
+        font-size:20px;
+        height: 50px;
+        width : 500px;
+        margin: 10px;
+    }
+    input[type=submit]{
+        width : 100px;
+        height: 50px;
+        background-color: pink;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        float:right;
+    }
+}
+
+.successMsg {
+    text-align: center;
+    margin:50px auto;
+    font-size:30px;
+}

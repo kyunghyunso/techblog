@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 import Unit from "./Unit";
 import axios from "@lib/Axios";
@@ -30,7 +30,7 @@ function Board({ auth }) {
 
   return (
     <div className={styles.board}>
-      <ul className={styles.boardList}>{list}</ul>
+      <ul>{list}</ul>
     </div>
   );
 }

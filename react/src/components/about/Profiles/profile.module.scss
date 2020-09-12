@@ -1,0 +1,17 @@
+.profilebox {
+    padding:48px 0px;
+    display: flex;
+    .image {
+        display:inline-flex;
+        width:124px;
+        height:124px;
+    }
+    .content {
+        display:inline-block;
+        height:124px;
+        h1 {
+            font-size:20px;
+            color:#5C5C5C;
+        }
+    }
+}

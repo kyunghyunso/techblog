@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./unit.module.css";
+import styles from "./unit.module.scss";
 
 import { Link } from "react-router-dom";
 import MetaInfo from "@components/common/MetaInfoCard";
@@ -11,8 +11,8 @@ export default function Unit({ data, id, auth }) {
     <li className={styles.section}>
       <div className={styles.textbox}>
         <Link to={`/blog/view/${id}`}>
-          <h1 className={styles.title}>{data.title}</h1>
-          <p className={styles.abstract}>{data.abstract}</p>
+          <h1>{data.title}</h1>
+          <p>{data.abstract}</p>
         </Link>
         <MetaInfo {...data} />
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './profile.module.css'
+import styles from './profile.module.scss'
 
 import { Link } from 'react-router-dom';
 
@@ -24,10 +24,10 @@ export default function Profile({profiles}){
 function Unit(user){
     return(
         <div className={styles.profilebox}>
-            <div className={styles.profile_image}>
+            <div className={styles.image}>
                 <img src={user.imgUrl}/>
             </div>
-            <div className={styles.profile_content}>
+            <div className={styles.content}>
                 <h1><span>{user.position+", "}</span><span>{user.name}</span></h1>
                 <p>{user.introduce}</p>
                 <p>

@@ -1,0 +1,24 @@
+.container {
+    height:45px;
+    display:flex;
+    img {
+        display:inline-block;
+        height:45px;
+        width:45px;
+    }
+    .describe{
+        display:inline-block;
+        margin: 0 0 0 10px;
+        p{
+            margin: 0 0 3px 0;
+        }
+        .author {
+            font-size:14px;
+            font-weight:bold;
+        }
+        .article {
+            font-size:13px;
+            color: #4D4D4D
+        }
+    }
+}

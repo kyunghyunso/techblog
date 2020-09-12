@@ -1,10 +1,9 @@
 import React from 'react'
-import styles from './unit.module.css'
+import styles from './editButton.module.scss'
 
 import { useHistory } from 'react-router-dom'
 
 import axios from '@lib/Axios'
-
 
 export default function EditButtons({id, auth}){
 

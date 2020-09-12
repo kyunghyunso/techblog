@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './section.module.css'
+import styles from './section.module.scss'
 import sections from './sections.json'
 
 export default function Section(){
@@ -20,8 +20,8 @@ export default function Section(){
 function Unit({title, text, author, imgUrl}){
     return(
         <div className={styles.section}>
-            <h1 className={styles.title}>{title}</h1>
-            <p className={styles.text}>{text}</p>
+            <h1>{title}</h1>
+            <p>{text}</p>
         </div>
     )
 }

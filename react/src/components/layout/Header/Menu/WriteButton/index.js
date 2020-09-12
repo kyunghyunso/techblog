@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './button.module.css'
+import './button.module.scss'
 import {useHistory} from 'react-router-dom'
 
 export default function WriteButton(){
@@ -12,6 +12,6 @@ export default function WriteButton(){
     }
 
     return(
-        <button onClick={()=>routeChange()} className={styles.button}>글쓰기</button>
+        <button onClick={()=>routeChange()}>글쓰기</button>
     )
 }

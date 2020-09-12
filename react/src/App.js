@@ -11,8 +11,6 @@ import BlogArticleView from 'src/pages/blog/view/[id]'
 import BlogArticleWriter from 'src/pages/blog/write'
 import BlogArticleEditor from 'src/pages/blog/edit/[id]'
 
-import './index.css';
-
 function App() {
   return (
     <Router>

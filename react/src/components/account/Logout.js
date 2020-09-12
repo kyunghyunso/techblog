@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './logout.module.css'
+import styles from './logout.module.scss'
 
 import { Logout } from '@redux/actions/auth'
 import { connect } from 'react-redux';

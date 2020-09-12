@@ -1,5 +1,5 @@
 import React, { useRef , useState} from 'react'
-import styles from './index.module.css'
+import styles from './index.module.scss'
 import { useHistory } from 'react-router-dom'
 
 import 'codemirror/lib/codemirror.css';

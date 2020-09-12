@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './index.module.css';
+import styles from './index.module.scss';
 import logo from './text_logo.svg';
 import search_icon from './search_icon.svg';
 import home_icon from './home_icon.svg';
@@ -23,9 +23,9 @@ function Header({auth}){
                 <div className={styles.left}>
                     <Menu/>
                     <div className={styles.icons}>
-                        <img src={search_icon} alt={"search"} className={styles.icon}/>
+                        <img src={search_icon} alt={"search"}/>
                         <a href={"https://zerohouse.team/"}>
-                            <img src={home_icon} alt={"home"} className={styles.icon}/>
+                            <img src={home_icon} alt={"home"}/>
                         </a>
                     </div>
                     {auth.isAuthenticated&&

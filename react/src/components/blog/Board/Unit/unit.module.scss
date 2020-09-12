@@ -1,0 +1,25 @@
+.section {
+    width:900px;
+    height:124px;
+    padding:40px 0;
+    border-bottom-style:solid;
+    border-width:thin;
+    border-color:#E8E8E8;
+    .textbox {
+        text-align:left;
+        letter-spacing: 0px;
+        color: #4D4D4D;
+        h1 {
+            font-size:23px;
+            margin:32px 0;
+            font-weight: bold;
+        }
+        p {
+            font-size:16px;
+        }
+    }
+    .imagebox {
+        width:319px;
+        height:220px;
+    }
+}
